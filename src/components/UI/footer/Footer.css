@@ -1,0 +1,45 @@
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.fa-2x {
+  font-size: 1.5rem;
+}
+
+.fa-solid-youtube {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff0103), to(#994a4a));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.fa-solid-twitter {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1c9bf0), to(#314fa2));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.fa-solid-facebook {
+  background: -webkit-gradient(linear, left top, left bottom, from(#577ecd), to(#15274c));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.fa-solid-github {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b1adad), to(#000000));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.to__start {
+  color: var(--color7);
+}
+
+.to__start:hover,
+.to__start:focus {
+  color: var(--color8);
+}

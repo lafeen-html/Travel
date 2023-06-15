@@ -1,0 +1,27 @@
+.form-control:focus {
+  border-color: rgb(255, 255, 255) !important;
+  box-shadow: 0 0 15px var(--color8) !important;
+}
+
+.btn-primary {
+  background-color: var(--color7) !important;
+  border: 2px solid var(--color7) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color6) !important;
+  border-color: var(--color6) !important;
+}
+
+.btn-primary:active {
+  background-color: var(--color5) !important;
+  border-color: var(--color5) !important;
+}
+
+.contact__email {
+  cursor: pointer;
+}
+
+.contact__email:hover {
+  color: var(--color6) !important;
+}

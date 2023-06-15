@@ -1,0 +1,84 @@
+/* Regular */
+@font-face {
+  font-family: "CoFoSansRegular";
+  src: local("CoFoSans"), url("../fonts/CoFoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: "CoFoSansMedium";
+  src: local("CoFoSans"), url("../fonts/CoFoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "CoFoSansBold";
+  src: local("CoFoSans"), url("../fonts/CoFoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Black */
+@font-face {
+  font-family: "CoFoSansBlack";
+  src: local("CoFoSans"), url("../fonts/CoFoSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  /*==== color variations ====*/
+  --white: #fff;
+  --black: #000;
+  --color1: #E7DACA;
+  --color2: #C4DCE4;
+  --color3: #9CC2CC;
+  --color4: #633d33;
+  --color5: #4e5b63;
+  --color6: #4a4c63;
+  --color7: #182535;
+  --color8: #fbf8f5;
+  --color9: #69635c;
+  --color10: #dadcc9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color7);
+}
+
+a:hover {
+  color: var(--color5);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "CoFoSansRegular";
+  background-image: url("../images/main-bg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color7);
+}
