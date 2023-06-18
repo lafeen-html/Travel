@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import ScrollToTop from '../scrollToTop/ScrollToTop';
 
 export default function Footer() {
   const year = new Date().getFullYear();
