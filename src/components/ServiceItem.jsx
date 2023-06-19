@@ -8,7 +8,7 @@ export default function ServiceItem({
 
   return (
     <div className="col">
-      <div className="card shadow-sm h-100">
+      <div className="card shadow-sm" style={{height: "100%"}}>
         <img src={img} alt="img" className="bd-placeholder-img card-img-top catalog-card-img" />
         <div className="card-body">
           <p className="card-text mb-2">{title}</p>

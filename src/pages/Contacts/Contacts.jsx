@@ -13,7 +13,7 @@ export default function Contacts() {
     <div className="container mb-5 pb-5">
 
       <div className="row justify-content-center mb-4">
-        <h2 className="text-center">Связаться с нами</h2>
+      <h2 className="text-center mb-2 fw-bold">Связаться с нами</h2>
       </div>
 
       <div className="row justify-content-center mb-3">

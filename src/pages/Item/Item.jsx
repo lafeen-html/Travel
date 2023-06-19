@@ -44,7 +44,7 @@ export default function Item() {
         :
         <div className="container mb-5 pb-5">
           <Link to="/catalog">
-            <span>Назад в каталог</span>
+            <span>Назад к турам</span>
           </Link>
 
           <h2 className="">{item[0].title}</h2>

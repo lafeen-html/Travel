@@ -9,8 +9,10 @@ export default function Modal({ active, setActive, children }) {
         <div className="popup__button mb-3">
           <button type="button" className="btn-close" onClick={() => setActive(false)}></button>
         </div>
-        {children}
-      </div>
+        <div>
+          {children}
+        </div>
+    </div>
     </div>
   )
 }

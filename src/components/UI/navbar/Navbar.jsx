@@ -3,16 +3,30 @@ import "./Navbar.css";
 import { NavLink } from 'react-router-dom';
 import { useState } from "react";
 import logo from './logo.png';
+import OutlineButton from '../buttons/OutlineButton';
+import Modal from '../modal/Modal';
+import InfoNavbar from '../../InfoNavbar/InfoNavbar';
 
 export default function Navbar(props) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
 
   return (
 
     <nav className="navigation">
-      <a href="/" className="brand-name">
+
+      <NavLink to="/" className="brand-name">
         <img src={logo} alt="Travel" />
-      </a>
+      </NavLink>
+
+      <OutlineButton onClick={() => setModalActive(true)}>
+        Как это работает
+      </OutlineButton>
+
+      <Modal active={modalActive} setActive={setModalActive}>
+        <InfoNavbar />
+      </Modal>
+
       <button className="hamburger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded);
@@ -23,6 +37,7 @@ export default function Navbar(props) {
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }
       >
+
         <ul className="nav mx-auto">
 
           <li className="nav-link">
@@ -33,7 +48,7 @@ export default function Navbar(props) {
 
           <li className="nav-link">
             <NavLink to={`/catalog`} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
-              <span>Каталог</span>
+              <span>Путешествия</span>
             </NavLink>
           </li>
 
