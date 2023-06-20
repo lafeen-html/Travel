@@ -7,7 +7,7 @@ import infoImg03 from "./info-img03.jpg";
 export default function InfoNavbar() {
   return (
     <div className="container-fluid py-3 bg-white rounded">
-      <h6 className="text-center fw-bold info-navbar-text">Что такое авторские туры?</h6>
+      <h5 className="text-center fw-bold info-navbar-text">Что такое авторские туры?</h5>
       <h6 className="text-center fw-bold">Это новый формат необычных путешествий в уникальные места</h6>
       <div className="row align-items-start">
 

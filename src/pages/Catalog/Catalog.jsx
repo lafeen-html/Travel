@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import ServiceItem from '../../components/ServiceItem';
 import CatalogOfServices from '../../data/CatalogOfServices.js'
 import ItemFilter from '../../components/ItemFilter';
-import Select from '../../components/UI/select/Select';
 import { useItems } from '../../hooks/useItems';
+import Pagination from '../../components/UI/pagination/Pagination';
 
 export default function Catalog() {
   const [items, setItems] = useState(CatalogOfServices);
@@ -26,24 +25,11 @@ export default function Catalog() {
               </div>
               :
               <>
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2">
-                  {sortedAndSearchedItems.map((arr, id) => {
-                    return (
-                      <ServiceItem
-                        key={id}
-                        id={arr.id}
-                        img={arr.img}
-                        title={arr.title}
-                        description={arr.description}
-                        date={arr.date}
-                        price={arr.price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')}
-                      />
-                    )
-                  })}
-                </div>
+                <Pagination pageDataLimit={6} items={sortedAndSearchedItems} />
               </>
             }
           </div>
+
         </div>
       </div>
     </div>

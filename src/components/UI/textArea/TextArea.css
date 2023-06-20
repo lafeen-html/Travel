@@ -3,6 +3,7 @@
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
   border: none;
+  width: 20rem;
 }
 
 .text-area:focus {

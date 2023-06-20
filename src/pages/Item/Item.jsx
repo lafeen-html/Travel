@@ -23,18 +23,27 @@ export default function Item() {
     setItem(copyItem);
   }, [])
 
+  useEffect(() => {
+    fetchComments(params.id);
+  }, [])
+
+  localStorage.setItem('comments', JSON.stringify({ comments }));
+
   const [fetchComments, isCommentLoading, commentError] = useFetching(async (id) => {
     const response = await PostService.getCommentsById(params.id);
     setComments(response.data);
   });
 
-  useEffect(() => {
-    fetchComments(params.id);
-  }, [])
-
   function createComment(newComment) {
     setComments([...comments, newComment]);
     setModalActive(false);
+
+    localStorage.setItem('comments', JSON.stringify(comments));
+    console.log(...comments);
+  }
+
+  function removeComment(comment) {
+    setComments(comments.filter((p) => p.id !== comment.id));
   }
 
   return (
@@ -49,13 +58,23 @@ export default function Item() {
 
           <h2 className="">{item[0].title}</h2>
 
-          <img className="item-img" src={item[0].img} alt="item-img" />
-          <p style={{ marginTop: "1rem" }}>Планируемая дата: {item[0].date}</p>
-          <p>Цена: {item[0].price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')} руб.</p>
-          <p>Описание: {item[0].description}</p>
+          <img className="item-img mb-3" src={item[0].img} alt="item-img" />
+
+          <div>
+            <span className="fw-bold">Планируемая дата: </span>
+            <p>{item[0].date}</p>
+          </div>
+
+          <span className="fw-bold">Цена: </span>
+          <p>
+            {item[0].price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')} руб.
+          </p>
+
+          <span className="fw-bold">Описание: </span>
+          <p className="fst-italic bg-light p-3 mb-5 rounded">{item[0].description}</p>
 
           <PrimaryButton
-            style={{ marginTop: "1rem", marginBottom: "1rem" }}
+            style={{ marginBottom: "1rem" }}
             onClick={() => setModalActive(true)}
           >
             Добавить отзыв
@@ -67,13 +86,26 @@ export default function Item() {
 
           <h3>Отзывы о туре {item[0].title}</h3>
 
-          {comments.map(comm =>
-            <div key={comm.id}>
-              <h6><strong>Имя:</strong> {comm.name}</h6>
-              <span><strong>Эл. почта:</strong> {comm.email}</span>
-              <p><strong>Отзыв:</strong> {comm.body}</p>
+          {!comments.length
+            ? <div>
+              <h2 className="text-center mt-4 mb-4 pb-5">Пока нет отзывов</h2>
             </div>
-          )}
+            :
+            <>
+              {comments.map(comm =>
+                <div key={comm.id} className="bg-light px-3 py-2 mb-3 rounded">
+                  <h6 className="pt-2"><strong>Имя:</strong> {comm.name}</h6>
+                  <span><strong>Эл. почта:</strong> {comm.email}</span>
+                  <p><strong>Отзыв:</strong> {comm.body}</p>
+                  <button className="trash__btn mb-2" onClick={() => removeComment(comm)}>
+                  <i className="bi bi-trash3-fill"></i>
+                  </button>
+                </div>
+              )}
+            </>
+          }
+
+
         </div>
       }
     </div >

@@ -2,3 +2,27 @@
   height: 15rem;
   border-radius: 10px;
 }
+
+.trash__btn {
+  border: none;
+  background-color: transparent;
+}
+
+.bi-trash3-fill {
+  border-radius: 5px;
+  padding: 0.3rem 0.4rem;
+  color: var(--color7);
+  border: 2px solid var(--color7);
+}
+
+.bi-trash3-fill:hover {
+  background-color: var(--color6);
+  border-color: var(--color6);
+  color: var(--white);
+}
+
+.bi-trash3-fill:active {
+  border: 2px solid var(--color5) !important;
+  background-color: var(--color5) !important;
+  color: var(--white);
+}

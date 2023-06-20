@@ -3,8 +3,9 @@ import Input from './UI/input/Input';
 import Select from './UI/select/Select';
 
 export default function ItemFilter({filter, setFilter}) {
+  
   return (
-    <div>
+    <div className='col d-flex justify-content-between align-items-center my-4'>
         <Input
           value={filter.query}
           onChange={(e) => setFilter({...filter, query: e.target.value})}

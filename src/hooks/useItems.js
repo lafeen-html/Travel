@@ -4,7 +4,6 @@ export const useSortedItems = (items, sort) => {
   //Кеширование результата выполнения, пока массив зависимостей не изменится
   const sortedItems = useMemo(() => {
     if (sort) {
-      // return [...items].sort((a, b) => a[sort].localeCompare(b[sort]));
       return [...items].sort((a, b) => a[sort] > b[sort] ? 1 : -1);
     }
     return items;

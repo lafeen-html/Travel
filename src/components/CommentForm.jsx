@@ -25,20 +25,24 @@ export default function CommentForm({ create }) {
 
   return (
     <form>
-      <Input
-        type="text"
-        placeholder="Имя"
-        value={comment.name}
-        onChange={(e) => setComment({ ...comment, name: e.target.value })}
-      />
-      <Input
-        type="email"
-        placeholder="Эл. почта"
-        value={comment.email}
-        onChange={(e) => setComment({ ...comment, email: e.target.value })}
-      />
+      <div className='mb-2'>
+        <Input
+          type="text"
+          placeholder="Имя*"
+          value={comment.name}
+          onChange={(e) => setComment({ ...comment, name: e.target.value })}
+        />
+      </div>
+      <div className='mb-2'>
+        <Input
+          type="email"
+          placeholder="Эл. почта*"
+          value={comment.email}
+          onChange={(e) => setComment({ ...comment, email: e.target.value })}
+        />
+      </div>
       <TextArea
-        placeholder="Отзыв"
+        placeholder="Отзыв*"
         value={comment.body}
         onChange={(e) => setComment({ ...comment, body: e.target.value })}
       />
