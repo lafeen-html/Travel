@@ -1,0 +1,65 @@
+h3 {
+  color: var(--color6);
+}
+
+.spanText {
+  text-transform: uppercase;
+}
+
+.centeredY {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  padding: 0 1rem;
+}
+
+.distributionMap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: #fbf8f5e2;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.distributionMap > img {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.distributionMap .mapPoint {
+  cursor: pointer;
+  outline: none;
+  z-index: 0;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #fbf8f56e;
+  border: 3px solid var(--color2);
+  border-radius: 50%;
+  color: transparent;
+  transition: 0.5s;
+}
+
+.distributionMap .mapPoint:hover {
+  border: 3px solid var(--color3);
+  background: #fbf8f5e2;
+}
+
+.distributionMap .mapPoint:active,
+.distributionMap .mapPoint:focus {
+  margin: 0;
+  padding: 0;
+  width: 8rem;
+  height: 6rem;
+  color: var(--color7);
+  background: #fbf8f5e2;
+  z-index: 1;
+  border-radius: 10px;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 8px #0000003d;
+  border: 3px solid var(--color3);
+}

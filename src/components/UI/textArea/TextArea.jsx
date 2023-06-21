@@ -1,10 +1,10 @@
 import React from 'react';
-import "./TextArea.css";
+import styles from "./TextArea.module.css";
 
 export default function TextArea(props) {
 
   return (
-    <textarea {...props} className="text-area">
+    <textarea {...props} className={styles.textArea}>
     </textarea>
   )
 }

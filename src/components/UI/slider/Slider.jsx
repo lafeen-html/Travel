@@ -10,7 +10,7 @@ export default function Slider() {
   return (
 
     <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
-      
+
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -23,7 +23,7 @@ export default function Slider() {
       <div className="carousel-inner">
 
         <div className="carousel-item active">
-          <img src={slide01} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide01} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Окунитесь в таинственную культуру Востока</h4>
@@ -32,7 +32,7 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item">
-          <img src={slide02} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide02} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Прикоснитесь к великой природе Алтая</h4>
@@ -41,7 +41,7 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item">
-          <img src={slide03} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide03} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Вырвитесь из города на выходные</h4>
@@ -50,7 +50,7 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item">
-          <img src={slide04} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide04} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Погрузитесь в мир дикой природы</h4>
@@ -59,7 +59,7 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item">
-          <img src={slide05} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide05} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Сделайте фото уникальных мест</h4>
@@ -68,7 +68,7 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item">
-          <img src={slide06} class="d-block mx-auto rounded w-75" alt="абстракция" />
+          <img src={slide06} className="d-block mx-auto rounded w-75" alt="абстракция" />
           <div className="container">
             <div className="carousel-caption text-start">
               <h4 className="fw-bold text-center">Исследуйте морские глубины и отдохните на пляже</h4>

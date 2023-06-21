@@ -1,6 +1,19 @@
+.div-item-img {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
+
 .item-img {
-  height: 15rem;
+  height: 18rem;
+  width: 100%;
   border-radius: 10px;
+  transition: 1s;
+  display: block;
+}
+
+.item-img:hover {
+  transform: scale(1.2);
 }
 
 .trash__btn {

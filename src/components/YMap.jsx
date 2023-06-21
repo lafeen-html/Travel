@@ -10,7 +10,7 @@ export default function YMap() {
         height='20rem'
         defaultState={{
           center: [55.711437, 37.798727],
-          zoom: 16,
+          zoom: 17,
           behaviors: ["drag", "dblClickZoom", "rightMouseButtonMagnifier", "multiTouch"],
         }}
       >

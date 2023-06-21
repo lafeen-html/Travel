@@ -44,7 +44,7 @@
 }
 
 .btn-close:hover {
-  color: #0f0b70;
+  color: var(--color7);
 }
 
 .btn-close:active,

@@ -7,8 +7,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="container-fluid footer blog-footer mb-2">
+    <footer className="container-fluid footer blog-footer mb-4">
+
       <div className="row">
+
         <div className="col-4 mx-auto text-center">
           <div className="col mx-auto text-center d-flex justify-content-around mb-2">
             <Link to="#">
@@ -24,9 +26,14 @@ export default function Footer() {
               <i className="fab fa-github fa-2x fa-solid-github"></i>
             </Link>
           </div>
-          <p>{`© ${year} Travel`}</p>
+
           <ScrollToTop />
         </div>
+
+        <div className="text-center">
+          {`© ${year} Travel `}<Link to="#">Политика конфиденциальности</Link>
+        </div>
+
       </div>
 
     </footer>

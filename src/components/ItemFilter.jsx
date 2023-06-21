@@ -8,6 +8,7 @@ export default function ItemFilter({filter, setFilter}) {
     <div className='col d-flex justify-content-between align-items-center my-4'>
         <Input
           value={filter.query}
+          type="search"
           onChange={(e) => setFilter({...filter, query: e.target.value})}
           placeholder="Поиск..."
         />

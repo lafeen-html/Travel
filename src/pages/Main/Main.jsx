@@ -5,6 +5,7 @@ import emojiSmile from "../../images/emoji-smile.svg";
 import shieldCheck from "../../images/shield-check.svg";
 import geoAlt from "../../images/geo-alt.svg";
 import Slider from '../../components/UI/slider/Slider';
+import WorldMap from '../../components/WorldMap/WorldMap';
 
 export default function Main() {
 
@@ -14,7 +15,7 @@ export default function Main() {
 
       <Slider />
 
-      <div className="row mt-5 pt-4 bg-white rounded shadow">
+      <div className="row mt-5 pt-4 bg-white rounded shadow px-2">
 
         <div className="col-lg-3">
           <img src={lock} alt="lock-icon" className="main-icons mx-auto d-block mb-3 main-img" />
@@ -41,6 +42,8 @@ export default function Main() {
         </div>
 
       </div>
+
+      <WorldMap />
 
     </div>
   )

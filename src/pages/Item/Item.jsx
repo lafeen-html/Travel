@@ -21,13 +21,11 @@ export default function Item() {
     let copyItem = [...item];
     copyItem = copyItem.filter(el => el.id === id);
     setItem(copyItem);
-  }, [])
+  }, []);
 
   useEffect(() => {
     fetchComments(params.id);
-  }, [])
-
-  localStorage.setItem('comments', JSON.stringify({ comments }));
+  }, []);
 
   const [fetchComments, isCommentLoading, commentError] = useFetching(async (id) => {
     const response = await PostService.getCommentsById(params.id);
@@ -37,14 +35,11 @@ export default function Item() {
   function createComment(newComment) {
     setComments([...comments, newComment]);
     setModalActive(false);
-
-    localStorage.setItem('comments', JSON.stringify(comments));
-    console.log(...comments);
-  }
+  };
 
   function removeComment(comment) {
     setComments(comments.filter((p) => p.id !== comment.id));
-  }
+  };
 
   return (
     <div>
@@ -58,17 +53,21 @@ export default function Item() {
 
           <h2 className="">{item[0].title}</h2>
 
-          <img className="item-img mb-3" src={item[0].img} alt="item-img" />
-
-          <div>
-            <span className="fw-bold">Планируемая дата: </span>
-            <p>{item[0].date}</p>
+          <div className="row my-3">
+            <div className="col-md-8">
+              <div className="div-item-img rounded">
+                <img className="item-img" src={item[0].img} alt="item-img" />
+              </div>
+            </div>
+            <div className="col-md-4 bg-light rounded d-flex flex-column justify-content-center align-items-center">
+              <span className="fw-bold">Планируемая дата: </span>
+              <p>{item[0].date}</p>
+              <span className="fw-bold">Цена: </span>
+              <p>
+                {item[0].price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')} руб.
+              </p>
+            </div>
           </div>
-
-          <span className="fw-bold">Цена: </span>
-          <p>
-            {item[0].price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')} руб.
-          </p>
 
           <span className="fw-bold">Описание: </span>
           <p className="fst-italic bg-light p-3 mb-5 rounded">{item[0].description}</p>
@@ -84,11 +83,11 @@ export default function Item() {
             <CommentForm create={createComment} />
           </Modal>
 
-          <h3>Отзывы о туре {item[0].title}</h3>
+          <h3 className="fw-bold pb-3">Отзывы о туре {item[0].title}</h3>
 
           {!comments.length
             ? <div>
-              <h2 className="text-center mt-4 mb-4 pb-5">Пока нет отзывов</h2>
+              <h3 className="text-center mt-4 mb-4 pb-5">Пока нет отзывов</h3>
             </div>
             :
             <>
@@ -98,7 +97,7 @@ export default function Item() {
                   <span><strong>Эл. почта:</strong> {comm.email}</span>
                   <p><strong>Отзыв:</strong> {comm.body}</p>
                   <button className="trash__btn mb-2" onClick={() => removeComment(comm)}>
-                  <i className="bi bi-trash3-fill"></i>
+                    <i className="bi bi-trash3-fill"></i>
                   </button>
                 </div>
               )}
