@@ -39,13 +39,13 @@ export default function Contacts() {
         </div>
 
         <div className="col-md-6">
-          <h4>Мы находимся по адресу:</h4>
+          <h5 className="fw-bold">Мы находимся по адресу:</h5>
           <p>г. Москва, ул. Академика Скрябина, д. 9, стр. 4</p>
-          <h4>График работы:</h4>
+          <h5 className="fw-bold">График работы:</h5>
           <p>Пн. – Чт.: с 9:00 до 17:45, Пт.: с 9:00 до 16:30</p>
-          <h4>Телефон:</h4>
+          <h5 className="fw-bold">Телефон:</h5>
           <p><a href="tel:+74952605289">+7 (495) 260-52-89</a></p>
-          <h4>Email:</h4>
+          <h5 className="fw-bold">Email:</h5>
           <p className="contact__email" onClick={sendMail}>hotline@eduprof.ru</p>
         </div>
 
