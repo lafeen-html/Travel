@@ -34,12 +34,3 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
 }
-
-.to__start {
-  color: var(--color7);
-}
-
-.to__start:hover,
-.to__start:focus {
-  color: var(--color8);
-}

@@ -7,14 +7,12 @@ import OutlineButton from '../buttons/OutlineButton';
 import Modal from '../modal/Modal';
 import InfoNavbar from '../../InfoNavbar/InfoNavbar';
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [modalActive, setModalActive] = useState(false);
 
   return (
-
     <nav className="navigation">
-
       <NavLink to="/" className="brand-name">
         <img src={logo} alt="Travel" />
       </NavLink>
@@ -32,14 +30,10 @@ export default function Navbar(props) {
           setIsNavExpanded(!isNavExpanded);
         }}>
       </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
+
+      <div className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
 
         <ul className="nav mx-auto">
-
           <li className="nav-link">
             <NavLink to={`/`} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
               <span>Главная</span>
@@ -57,14 +51,9 @@ export default function Navbar(props) {
               <span>Контакты</span>
             </NavLink>
           </li>
-
         </ul>
 
       </div>
     </nav>
-
-
-
-
   )
 }

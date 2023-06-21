@@ -8,12 +8,12 @@ import Item from '../pages/Item/Item';
 
 export default function AppRouter() {
   return (
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="catalog" element={<Catalog />} />
-        <Route path="catalog/:id" element={<Item />} />
-        <Route path="contacts" element={<Contacts />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="catalog" element={<Catalog />} />
+      <Route path="catalog/:id" element={<Item />} />
+      <Route path="contacts" element={<Contacts />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   )
 }

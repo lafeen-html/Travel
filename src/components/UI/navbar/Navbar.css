@@ -27,7 +27,7 @@
   font-size: 1.3rem;
 }
 
-.brand-name>img{
+.brand-name > img {
   height: 4rem;
 }
 
@@ -104,7 +104,7 @@
     z-index: 100;
   }
 
-  .brand-name>img{
+  .brand-name > img {
     height: 2rem;
   }
 

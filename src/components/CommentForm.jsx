@@ -21,13 +21,13 @@ export default function CommentForm({ create }) {
       create(newComment);
       setComment({ name: "", email: "", body: "", });
     }
-  }
+  };
 
   const handleKeyPress = (event) => {
-    if(event.key !== ''){
+    if (event.key !== '') {
       document.querySelector('.message').innerHTML = '';
     }
-  }
+  };
 
   return (
     <form>

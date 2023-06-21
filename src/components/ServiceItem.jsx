@@ -3,12 +3,12 @@ import OutlineButton from "./UI/buttons/OutlineButton";
 import { NavLink } from 'react-router-dom';
 
 export default function ServiceItem({
-  id = "", img = "", title = "", start = "", end = "", date = "", price = "" }) {
+  id = "", img = "", title = "", date = "", price = "" }) {
 
   return (
     <div className="col">
       <div className="card shadow-sm bg-light" style={{ height: "100%" }}>
-        <img src={img} alt="img" className="bd-placeholder-img card-img-top catalog-card-img" style={{ height: "10rem" }}/>
+        <img src={img} alt="img" className="bd-placeholder-img card-img-top catalog-card-img" style={{ height: "10rem" }} />
         <div className="card-body">
           <p className="card-text mb-2">
             <NavLink to={`${id}`}>

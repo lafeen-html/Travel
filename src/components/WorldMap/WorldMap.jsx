@@ -3,6 +3,7 @@ import styles from "./WorldMap.module.css";
 import worldMap from "./world-map.png";
 
 export default function WorldMap() {
+  
   return (
     <>
       <div className="container mt-5">
