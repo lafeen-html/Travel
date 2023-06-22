@@ -1,8 +1,7 @@
 import React from 'react';
 import "./Contacts.css";
 import YMap from '../../components/YMap';
-import Input from '../../components/UI/input/Input';
-import TextArea from '../../components/UI/textArea/TextArea';
+import LoginForm from '../../components/LoginForm';
 
 export default function Contacts() {
   const sendMail = () => {
@@ -22,20 +21,7 @@ export default function Contacts() {
       <div className="row justify-content-center mb-3">
 
         <div className="col-md-5">
-          <form action="" className="mt-3">
-            <div className="form-group mb-3">
-              <Input type="search" placeholder="Ваше имя*" required />
-            </div>
-            <div className="form-group mb-3">
-              <Input type="search" placeholder="Ваш Email*" required />
-            </div>
-            <div className="form-group mb-3">
-              <TextArea placeholder="Сообщение" />
-            </div>
-            <div className="form-group">
-              <input type="submit" className="btn btn-sm btn-primary" value="Отправить" />
-            </div>
-          </form>
+          <LoginForm />
         </div>
 
         <div className="col-md-6">

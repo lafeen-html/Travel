@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center">
-          {`© ${year} Travel `}<Link to="#">Политика конфиденциальности</Link>
+          {`© ${year} Travel | `}<Link to="#">Политика конфиденциальности</Link>
         </div>
 
       </div>

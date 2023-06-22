@@ -11,6 +11,7 @@ export default function Pagination({ pageDataLimit, items }) {
     useEffect(() => {
         setCurrPageItems(getPageData());
         setPageNumberGroup(getPageNumberGroup());
+        toTopOnClick();
     }, [items, currPageNo]);
 
     function nextPage() {
