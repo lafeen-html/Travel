@@ -1,12 +1,13 @@
 import React from 'react';
 import "./Select.css";
 
-export default function Select({ options, defaultValue, value, onChange }) {
+export default function Select({ options, defaultValue, value, onChange, style }) {
   return (
     <select
       value={value}
       onChange={e => onChange(e.target.value)}
-      className="w-25 form-select form-select-sm"
+      className="form-select form-select-sm" 
+      style={style}
     >
       <option disabled value="">{defaultValue}</option>
       {options.map(option =>

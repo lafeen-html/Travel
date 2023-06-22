@@ -46,7 +46,7 @@ export default function Pagination({ pageDataLimit, items }) {
 
     return (
         <div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2 mb-4">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3 mt-2 mb-4 align-content-stretch">
                 {currPageItems.map((arr, id) => {
                     return (
                         <ServiceItem
