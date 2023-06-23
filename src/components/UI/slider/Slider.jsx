@@ -8,9 +8,10 @@ import slide05 from "./slide05.webp";
 import slide06 from "./slide06.webp";
 
 export default function Slider() {
-  return (
 
-    <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
+  return (
+    
+    <div id="myCarousel" className="carousel slide carousel-fade mb-6" data-bs-ride="carousel" data-bs-theme="light">
 
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

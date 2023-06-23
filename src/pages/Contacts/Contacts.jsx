@@ -21,6 +21,7 @@ export default function Contacts() {
       <div className="row justify-content-center mb-3">
 
         <div className="col-md-5">
+        <h5 className="fw-bold">Форма обратной связи:</h5>
           <LoginForm />
         </div>
 

@@ -9,6 +9,7 @@ import CatalogOfServices from '../../data/CatalogOfServices.js';
 import Modal from '../../components/UI/modal/Modal';
 import CommentForm from '../../components/CommentForm';
 import PrimaryButton from '../../components/UI/buttons/PrimaryButton';
+import CollapsibleDiv from '../../components/UI/collapsibleDiv/CollapsibleDiv';
 
 export default function Item() {
   const params = useParams();
@@ -69,11 +70,12 @@ export default function Item() {
             </div>
           </div>
 
-          <span className="fw-bold">Описание: </span>
-          <p className="fst-italic bg-light p-3 mb-5 rounded">{item[0].description}</p>
+          <CollapsibleDiv classNameHeader={"fw-bold mb-1 fs-4"} title={"Описание тура "}>
+            <p className="fst-italic bg-light p-3 mb-4 rounded">{item[0].description}</p>
+          </CollapsibleDiv>
 
           <PrimaryButton
-            style={{ marginBottom: "1rem" }}
+            style={{ marginBottom: "1rem", marginTop: "1rem" }}
             onClick={() => setModalActive(true)}
           >
             Добавить отзыв
@@ -103,7 +105,6 @@ export default function Item() {
               )}
             </>
           }
-
 
         </div>
       }

@@ -67,9 +67,10 @@ export default function LoginForm() {
       </form>
 
       <Modal active={modalActive} setActive={setModalActive}>
-        <div className="rounded p-3 bg-white">
-          <p className="text-center">Спасибо за Ваше сообщение! <i className="bi bi-emoji-heart-eyes"></i></p>
-          <p className="text-center">Мы с Вами свяжемся в ближайшее время.</p>
+        <div className="rounded pb-4">
+          <p className="text-center fs-1"><i className="bi bi-emoji-smile"></i></p>
+          <p className="text-center fs-4 text-uppercase fw-bold">Спасибо за сообщение!</p>
+          <p className="text-center">Мы свяжемся с Вами в ближайшее время.</p>
         </div>
       </Modal>
     </>
