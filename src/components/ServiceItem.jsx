@@ -8,7 +8,7 @@ export default function ServiceItem({
   return (
     <div className="col-md">
       <div className="card shadow-sm bg-light" style={{ height: "100%" }}>
-        <img src={img} alt="img" className="bd-placeholder-img card-img-top catalog-card-img" style={{ height: "10rem" }} />
+        <img src={img} alt="img" className="bd-placeholder-img card-img-top catalog-card-img img-fluid" />
         <div className="card-body">
           <p className="card-text mb-2">
             <NavLink to={`${id}`}>

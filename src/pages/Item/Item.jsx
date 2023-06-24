@@ -55,12 +55,12 @@ export default function Item() {
           <h2 className="">{item[0].title}</h2>
 
           <div className="row my-3">
-            <div className="col-md-8">
+            <div className="col-md-6">
               <div className="div-item-img rounded">
-                <img className="item-img" src={item[0].img} alt="item-img" />
+                <img className="item-img img-fluid" src={item[0].img} alt="item-img" />
               </div>
             </div>
-            <div className="col-md-4 bg-light rounded d-flex flex-column justify-content-center align-items-center">
+            <div className="col-md-3 bg-light rounded d-flex flex-column text-center justify-content-center align-items-center">
               <span className="fw-bold">Планируемая дата: </span>
               <p>{item[0].date}</p>
               <span className="fw-bold">Цена: </span>

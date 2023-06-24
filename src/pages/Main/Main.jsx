@@ -11,7 +11,7 @@ export default function Main() {
 
   return (
     <div className="container marketing mt-2 mb-5 pb-5">
-      <h1 className="pb-4 text-center fw-bold">Авторские туры — новый формат <span style={{ color: "var(--color8)"}}>насыщенных</span> путешествий</h1>
+      <h1 className="pb-4 text-center fw-bold">Авторские туры — новый формат <span style={{ color: "var(--color10)"}}>насыщенных</span> путешествий</h1>
 
       <Slider />
 
