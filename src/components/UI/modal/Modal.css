@@ -21,6 +21,7 @@
   display: flex;
   pointer-events: all;
   transition: 0.5s;
+  overflow-y: initial !important;
 }
 
 .modal__content {
@@ -36,6 +37,7 @@
   box-shadow: 0 3px 8px #0000003d;
   background-color: var(--color2);
   transition: 0.5s all;
+  overflow-y: auto;
 }
 
 .popup__button {
@@ -51,4 +53,11 @@
 .btn-close:focus {
   outline: none !important;
   box-shadow: none;
+}
+
+@media screen and (max-width: 811px) {
+  .modal__content {
+    height: 60vh;
+    width: 80vw;
+  }
 }

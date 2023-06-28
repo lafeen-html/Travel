@@ -11,7 +11,7 @@ export default function Contacts() {
   }
 
   return (
-    <div className="container mb-5 pb-5">
+    <div className="container mb-5 pb-5 mt-3">
 
       <div className="row justify-content-center">
         <h2 className="text-center fw-bold">Забронируйте тур прямо сейчас!</h2>
@@ -20,12 +20,12 @@ export default function Contacts() {
 
       <div className="row justify-content-center mb-3">
 
-        <div className="col-md-5">
+        <div className="col-lg-5">
         <h5 className="fw-bold">Форма обратной связи:</h5>
           <LoginForm />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-lg-6">
           <h5 className="fw-bold">Мы находимся по адресу:</h5>
           <p>г. Москва, ул. Академика Скрябина, д. 9, стр. 4</p>
           <h5 className="fw-bold">График работы:</h5>
