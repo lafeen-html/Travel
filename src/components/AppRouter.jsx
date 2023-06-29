@@ -9,7 +9,7 @@ import Item from '../pages/Item/Item';
 export default function AppRouter() {
   return (
     <Routes>
-      <Route index element={<Main />}></Route>
+      <Route index element={<Main />} />
       <Route path="/" element={<Main />} />
       <Route path="catalog" element={<Catalog />} />
       <Route path="catalog/:id" element={<Item />} />
