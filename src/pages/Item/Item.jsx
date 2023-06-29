@@ -47,7 +47,7 @@ export default function Item() {
       {isCommentLoading
         ? <Loader />
         :
-        <div className="container mb-5 pb-5">
+        <div className="container mt-4 mb-5 pb-5">
           <Link to="/catalog">
             <span>Назад к турам</span>
           </Link>
